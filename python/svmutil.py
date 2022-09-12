@@ -137,10 +137,10 @@ def svm_train(arg1, arg2=None, arg3=None):
 	if param.gamma == 0 and prob.n > 0: 
 		param.gamma = 1.0 / prob.n
 	libsvm.svm_set_print_string_function(param.print_func)
-	param.show()
-	err_msg = libsvm.svm_check_parameter(prob, param)
-	if err_msg:
-		print('Error: ', err_msg)
+	#param.show()
+	#err_msg = libsvm.svm_check_parameter(prob, param)
+	#if err_msg:
+		#print('Error: ', err_msg)
 		#raise ValueError('Error: %s' % err_msg)
 
 	if param.cross_validation:
