@@ -140,7 +140,8 @@ def svm_train(arg1, arg2=None, arg3=None):
 	param.show()
 	err_msg = libsvm.svm_check_parameter(prob, param)
 	if err_msg:
-		raise ValueError('Error: %s' % err_msg)
+		print('Error: ', err_msg)
+		#raise ValueError('Error: %s' % err_msg)
 
 	if param.cross_validation:
 		l, nr_fold = prob.l, param.nr_fold
