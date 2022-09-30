@@ -189,10 +189,10 @@ def svm_predict(y, x, m, options=""):
 	i = 0
 	while i < len(argv):
 		if argv[i] == '-b':
-			i += 1
+			#i += 1
 			predict_probability = int(argv[i])
-		else:
-			raise ValueError("Wrong options")
+		#else:
+			#raise ValueError("Wrong options")
 		i+=1
 
 	svm_type = m.get_svm_type()
